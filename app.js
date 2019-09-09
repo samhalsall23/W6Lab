@@ -108,7 +108,7 @@ app.get('/deletetask', function (req, res) {
 
 // POST DELETE TASK
 app.post('/deletetaskdata', function (req, res) {
-    Task.findByIdAndRemove(taskDetails.tid, function(err, result){
+    Task.findByIdAndRemove(req.body.tid, function(err, result){
         if (err)
             console.log(err);
     });
