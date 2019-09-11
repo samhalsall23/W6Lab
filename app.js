@@ -148,6 +148,17 @@ app.post('/updatetaskdata', function (req, res) {
     res.redirect('/gettasks');// redirect the client to list users page
 });
 
+// GET TOP 3 DESC
+app.get('/gettasks3', function(req,res){
+    Task.find().populate('task').sort({name:-1}).limit(3).exec(function(err, data){
+        
+        res.render(__dirname + "/views/gettasks3.html", { taskDb: data });
+    })
+    
+}); 
+
+
+
 
 
 

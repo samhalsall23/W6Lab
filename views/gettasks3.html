@@ -16,7 +16,7 @@
     <link rel = "stylesheet" href = "css/styles.css">
     <img src = "Monash_Header.jpg" />
     
-    <h1> List Tasks</h1> </br>
+    <h1> List 3 Tasks</h1> </br>
     <h1>
         <a href="/">Add Developer</a>
         <a href="/getdevelopers"> List Developers</a>
@@ -29,27 +29,27 @@
 
     
     <table style = "width: 90%">
-        <tr>
-            <td>Task ID</td>
-            <td>Task Name</td>
-            <td>ID of Developer Assigned</td>
-            <td>Due Date</td>
-            <td>Status</td>
-            <td>Description</td>
-
-        </tr>
-        
-        <% for (let i=0;i<taskDb.length;i++){ %>
             <tr>
-                <td> <%= taskDb[i]._id %> </td>
-                <td> <%= taskDb[i].name %> </td>
-                <td> <%= taskDb[i].assign %> </td>
-                <td> <%= taskDb[i].due%> </td>
-                <td> <%= taskDb[i].status%> </td>
-                <td> <%= taskDb[i].desc%> </td>
+                <td>Task ID</td>
+                <td>Task Name</td>
+                <td>ID of Developer Assigned</td>
+                <td>Due Date</td>
+                <td>Status</td>
+                <td>Description</td>
+
             </tr>
-            <%}%>
-</table>
+            
+            <% for (let i=0;i<taskDb.length;i++){ %>
+                <tr>
+                    <td> <%= taskDb[i]._id %> </td>
+                    <td> <%= taskDb[i].name %> </td>
+                    <td> <%= taskDb[i].assign %> </td>
+                    <td> <%= taskDb[i].due%> </td>
+                    <td> <%= taskDb[i].status%> </td>
+                    <td> <%= taskDb[i].desc%> </td>
+                </tr>
+                <%}%>
+    </table>
 
 
 </body>
